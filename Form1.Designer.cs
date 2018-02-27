@@ -42,6 +42,7 @@
             this.normalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ucodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -61,7 +62,7 @@
             // 
             this.toolStripMenuItem2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(113, 24);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 24);
             this.toolStripMenuItem2.Text = "open";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -69,7 +70,7 @@
             // 
             this.saveToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.saveToolStripMenuItem.Text = "save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -88,7 +89,7 @@
             // 
             this.undoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
             this.undoToolStripMenuItem.Text = "undo";
             this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
@@ -96,7 +97,7 @@
             // 
             this.redoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.redoToolStripMenuItem.Name = "redoToolStripMenuItem";
-            this.redoToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.redoToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
             this.redoToolStripMenuItem.Text = "redo";
             this.redoToolStripMenuItem.Click += new System.EventHandler(this.redoToolStripMenuItem_Click_1);
             // 
@@ -104,7 +105,7 @@
             // 
             this.searchToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
             this.searchToolStripMenuItem.Text = "search";
             this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
@@ -146,7 +147,8 @@
             // modeToolStripMenuItem
             // 
             this.modeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.normalToolStripMenuItem});
+            this.normalToolStripMenuItem,
+            this.ucodeToolStripMenuItem});
             this.modeToolStripMenuItem.Name = "modeToolStripMenuItem";
             this.modeToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.modeToolStripMenuItem.Text = "Mode";
@@ -155,7 +157,7 @@
             // 
             this.normalToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.normalToolStripMenuItem.Name = "normalToolStripMenuItem";
-            this.normalToolStripMenuItem.Size = new System.Drawing.Size(126, 24);
+            this.normalToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.normalToolStripMenuItem.Text = "normal";
             this.normalToolStripMenuItem.Click += new System.EventHandler(this.normalToolStripMenuItem_Click_1);
             // 
@@ -182,6 +184,14 @@
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox2_Paint);
+            // 
+            // ucodeToolStripMenuItem
+            // 
+            this.ucodeToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ucodeToolStripMenuItem.Name = "ucodeToolStripMenuItem";
+            this.ucodeToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.ucodeToolStripMenuItem.Text = "u-code";
+            this.ucodeToolStripMenuItem.Click += new System.EventHandler(this.ucodeToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -221,6 +231,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolStripMenuItem modeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem normalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ucodeToolStripMenuItem;
     }
 }
 

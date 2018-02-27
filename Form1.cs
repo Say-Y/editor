@@ -82,7 +82,7 @@ namespace editor
             Mode = Mode.None;
         }
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        private void toolStripMenuItem2_Click(object sender, EventArgs e) //open
         {
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -179,7 +179,7 @@ namespace editor
             this.ForeColor = Color.Black;
             Mode = Mode.None;
         }
-        public bool isUCO =true;
+        public bool isUCO = true;
 
         private void interpreterToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -218,10 +218,9 @@ namespace editor
             sentences = ThisFile.GetText();
             int L = 0, C = 0;
             int count = 0;
-            startline = (Line > 15) ? Line - 15 : 0;
+            startline = (Line > 31) ? Line - 31 : 0;
             for (int i = startline; i < startline+(((sentences.Count-startline)<33)? (sentences.Count - startline):33); i++)
             {
-                
                 bool searchpoint = false;
                 bool isInstruction = false;
                 for (int j = 0; j < sentences[i].Length; j++)
@@ -539,6 +538,12 @@ namespace editor
         private void undoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Undo();
+        }
+
+        private void ucodeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            isUCO = true;
+            pictureBox1.Refresh();
         }
     }
 }
