@@ -28,8 +28,13 @@ namespace editor
     public partial class Form1 : Form
     {
         private int Line;
-
         private int Col;
+        private int startline;
+        private bool isUCO = true;
+
+        private bool isAlt = false;
+        private bool isCtrl = false;
+        private bool isShift = false;
 
         public List<string> sentences = new List<string>();
 
@@ -43,11 +48,6 @@ namespace editor
         public SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
         public Mode Mode = Mode.None;
-
-        public bool isAlt = false;
-        public bool isCtrl = false;
-        public bool isShift = false;
-
         public Form1()
         {
             InitializeComponent();
@@ -179,7 +179,7 @@ namespace editor
             this.ForeColor = Color.Black;
             Mode = Mode.None;
         }
-        public bool isUCO = true;
+       
 
         private void interpreterToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -198,6 +198,7 @@ namespace editor
             this.ForeColor = Color.Black;
             Mode = Mode.None;
         }
+
         private void cursorShow(Graphics graphics)
         {
             Point point = new Point(Col * 10, (Line+1-startline) * 20); 
@@ -208,7 +209,7 @@ namespace editor
             graphics.DrawRectangle(drawPen, rectangle);
             graphics.FillRectangle(sb, rectangle);
         }
-        public int startline;
+        
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             Graphics graphics = e.Graphics;
