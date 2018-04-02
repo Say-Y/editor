@@ -54,6 +54,7 @@ namespace editor
             isSearchMode = false;
             Line = 0;
             Col = 0;
+            menuStrip1.Renderer = new ToolStripProfessionalRenderer(new MenuRenderer());
         }
 
         public void ShowText()
@@ -545,6 +546,10 @@ namespace editor
         {
             isUCO = true;
             pictureBox1.Refresh();
+        }
+
+        private void MenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
         }
     }
 }
