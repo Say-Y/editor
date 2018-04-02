@@ -547,9 +547,5 @@ namespace editor
             isUCO = true;
             pictureBox1.Refresh();
         }
-
-        private void MenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-        }
     }
 }
